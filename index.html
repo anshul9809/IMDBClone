@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDB</title>
+    <link rel="icon" href="img/imdb_icon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="head-container flex">
+            <a href="#" class="brand">
+                <img src="img/icon3.jpg" alt="">
+            </a>
+
+            <div class="menu-parent flex">
+                <!-- <form action="" method="post" class="search-movie flex" onsubmit=" return loadMovies()"> -->
+                <div class="search-movie flex">
+                    <input type="text" id="search" class="search-input" placeholder="Search.." onclick="loadMovies()" onkeyup="loadMovies()" autocomplete="off">
+                    <button type="submit" class="search-button" onclick="loadMovies()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                    
+                <!-- </form> -->
+
+                <div class="wishlist flex">
+                    <a href="#" id="wishlist"><i class="fa-solid fa-bookmark"></i> <span class="label-text">Wishlist</span> </a>
+                </div>
+                <div class="profile flex">
+                    <a href="">
+                        <i class="fa fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+    <!-- starting with the search result list -->
+    <div id="movies-grid-container" class="movies-grid-container flex">
+        <ul class="movies-grid" id="movies-grid">
+            <i id="favorites" >Wishlist is empty</i>
+            
+        </ul>
+
+    </div>
+
+    <!-- search list end -->
+    <script src="js/script.js"></script>
+</body>
+</html>
